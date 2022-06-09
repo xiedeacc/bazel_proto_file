@@ -10,9 +10,9 @@ message RequestConfig {
   string app_version = 4;
 }
 
-message GetServerStatusRequest { RequestConfig config = 1; }
+message ServerStatusRequest { RequestConfig config = 1; }
 
-message GetServerStatusResponse {
+message ServerStatusResponse {
   error.ErrorCode ret_code = 1;
   string ret_msg = 2;
   string server_status = 3;
@@ -26,28 +26,28 @@ message IpInfo {
   uint64 update_timestamp = 5;
 }
 
-message GetIpRequest { RequestConfig config = 1; }
+message IpInfoRequest { RequestConfig config = 1; }
 
-message GetIpResponse {
+message IpInfoResponse {
   error.ErrorCode ret_code = 1;
   string ret_msg = 2;
   repeated IpInfo = 3;
 }
 
-message PostIpRequest {
+message PostIpInfoRequest {
   RequestConfig config = 1;
   IpInfo ip_info = 2;
 }
 
-message PostIpResponse {
+message PostIpInfoResponse {
   error.ErrorCode ret_code = 1;
   string ret_msg = 2;
 }
 
 service GrpcService {
-  rpc ServerStatus(GetServerStatusRequest) returns (GetServerStatusResponse) {}
+  rpc ServerStatus(ServerStatusRequest) returns (ServerStatusResponse) {}
 
-  rpc IpInfo(GetIpRequest) returns (GetIpResponse) {}
+  rpc IpInfo(IpInfoRequest) returns (IpInfoResponse) {}
 
-  rpc PostIp(PostIpRequest) returns (PostIpResponse) {}
+  rpc PostIpInfo(PostIpInfoRequest) returns (PostIpInfoResponse) {}
 }
