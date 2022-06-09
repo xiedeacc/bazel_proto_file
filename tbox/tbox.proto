@@ -47,7 +47,7 @@ message PostIpResponse {
 service GrpcService {
   rpc ServerStatus(GetServerStatusRequest) returns (GetServerStatusResponse) {}
 
-  rpc GetIpInfo(GetIpRequest) returns (GetIpResponse) {}
+  rpc IpInfo(GetIpRequest) returns (GetIpResponse) {}
 
   rpc PostIp(PostIpRequest) returns (PostIpResponse) {}
 }
