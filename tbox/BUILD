@@ -11,6 +11,7 @@ cc_grpc_library(
     deps = [
         ":tbox_service_cc_proto",
         "//error:error_code_cc_proto",
+        "//error:error_code_proto",
     ],
 )
 
