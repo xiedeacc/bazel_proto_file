@@ -17,7 +17,6 @@ cc_proto_library(
     name = "tbox_service_cc_proto",
     deps = [
         ":tbox_service_proto",
-        "//error:error_code_proto",
     ],
 )
 
