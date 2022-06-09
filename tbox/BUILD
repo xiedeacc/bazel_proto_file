@@ -6,7 +6,6 @@ cc_grpc_library(
     name = "tbox_service",
     srcs = [
         ":tbox_service_proto",
-        "//error:error_code_proto",
     ],
     grpc_only = True,
     deps = [
@@ -24,5 +23,6 @@ proto_library(
     name = "tbox_service_proto",
     srcs = ["tbox_service.proto"],
     deps = [
+        "//error:error_code_proto",
     ],
 )
