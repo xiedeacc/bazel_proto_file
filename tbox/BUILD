@@ -4,7 +4,10 @@ package(default_visibility = ["//visibility:public"])
 
 cc_grpc_library(
     name = "tbox_service",
-    srcs = [":tbox_service_proto"],
+    srcs = [
+        ":tbox_service_proto",
+        "//error:error_code_proto",
+    ],
     grpc_only = True,
     deps = [
         ":tbox_service_cc_proto",

@@ -4,11 +4,11 @@ package(default_visibility = ["//visibility:public"])
 
 cc_proto_library(
     name = "error_code_cc_proto",
-    deps = [":error_code"],
+    deps = [":error_code_proto"],
 )
 
 proto_library(
-    name = "error_code",
+    name = "error_code_proto",
     srcs = ["error_code.proto"],
     deps = [
     ],
