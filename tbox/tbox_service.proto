@@ -44,7 +44,7 @@ message PostIpInfoResponse {
   string ret_msg = 2;
 }
 
-service GrpcService {
+service TboxService {
   rpc ServerStatus(ServerStatusRequest) returns (ServerStatusResponse) {}
 
   rpc IpInfo(IpInfoRequest) returns (IpInfoResponse) {}
