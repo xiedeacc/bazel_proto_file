@@ -45,9 +45,7 @@ message PostIpInfoResponse {
 }
 
 service TboxService {
-  rpc ServerStatus(ServerStatusRequest) returns (ServerStatusResponse) {}
-
   rpc IpInfo(IpInfoRequest) returns (IpInfoResponse) {}
-
-  rpc PostIpInfo(PostIpInfoRequest) returns (PostIpInfoResponse) {}
+  rpc PostIpInfo(stream PostIpInfoRequest) returns (PostIpInfoResponse) {}
+  rpc ServerStatus(ServerStatusRequest) returns (stream ServerStatusResponse) {}
 }
